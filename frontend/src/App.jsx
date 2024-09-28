@@ -26,7 +26,7 @@ const App = () => {
             <Box sx={{ mt: 2, p: 2 }}>
                 <Grid container spacing={2}>
                     <Grid item xs={12} md={12}>
-                        <UserList users={users} /> {/* UserList now handles filtering */}
+                        <UserList users={users} />
                     </Grid>
                 </Grid>
             </Box>

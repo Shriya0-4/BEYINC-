@@ -2,8 +2,8 @@ import React from 'react';
 import { AppBar, Toolbar, Typography, Button, TextField } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
-import PitchIcon from '@mui/icons-material/AttachMoney'; // You can choose an appropriate icon for "Pitches"
-import MentorIcon from '@mui/icons-material/People'; // You can choose an appropriate icon for "Mentor"
+import PitchIcon from '@mui/icons-material/AttachMoney';
+import MentorIcon from '@mui/icons-material/People';
 import MessageIcon from '@mui/icons-material/Message';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import ProfileIcon from '@mui/icons-material/AccountCircle';
@@ -16,7 +16,7 @@ const Navbar = () => {
                     BEYINC
                 </Typography>
                 
-                {/* Search Input */}
+               
                 <TextField
                     variant="outlined"
                     placeholder="Search..."
@@ -24,7 +24,7 @@ const Navbar = () => {
                     sx={{
                         marginRight: 2,
                         backgroundColor: 'white',
-                        borderRadius: '50%', // Rounded corners
+                        borderRadius: '50%', 
                     }}
                     InputProps={{
                         startAdornment: (
@@ -33,7 +33,7 @@ const Navbar = () => {
                     }}
                 />
 
-                {/* Navigation Buttons */}
+                
                 <Button color="inherit" sx={{ color: 'purple', flexDirection: 'column', display: 'flex', alignItems: 'center' }}>
                     <HomeIcon />
                     <Typography variant="caption">Home</Typography>

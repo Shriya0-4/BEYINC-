@@ -3,21 +3,18 @@ import { Card, CardContent, Typography, Chip, Box } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
 import { styled } from '@mui/system';
 
-// Styled Chip component for tags
 const StyledChip = styled(Chip)(({ theme }) => ({
     margin: theme.spacing(0.5),
     fontSize: '0.8rem',
 }));
 
 const UserCard = ({ user }) => {
-    // Check if user data is incomplete
     if (!user) {
-        return null; // Return null if user data is not provided
+        return null; 
     }
 
     return (
         <Card variant="outlined" sx={{ margin: 2, position: 'relative' }}>
-            {/* Rating and Reviews in Top Right Corner */}
             <Box sx={{ position: 'absolute', top: 16, right: 16, display: 'flex', alignItems: 'center' }}>
                 <StarIcon sx={{ color: 'gold', fontSize: '1rem' }} />
                 <Typography variant="body2" sx={{ marginLeft: 0.5 }}>

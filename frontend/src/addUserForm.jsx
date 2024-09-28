@@ -53,7 +53,7 @@ const AddUserForm = ({ fetchUsers }) => {
                 p: 3,
                 border: '1px solid #ccc',
                 borderRadius: '8px',
-                backgroundColor: '#f5f5f5', // Light grey background
+                backgroundColor: '#f5f5f5',
                 boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
             }}
         >
@@ -151,12 +151,12 @@ const AddUserForm = ({ fetchUsers }) => {
     type="submit"
     variant="contained"
     sx={{
-        backgroundColor: '#C08DC3', // Light purple
-        color: 'white', // Text color
+        backgroundColor: '#C08DC3',
+        color: 'white',
         '&:hover': {
-            backgroundColor: 'purple', // Darker shade on hover
+            backgroundColor: 'purple',
         },
-        mt: 2, // Add margin-top for spacing
+        mt: 2,
     }}
 >
     Add User

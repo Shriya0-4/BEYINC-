@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import UserCard from './UserCard'; // Import the UserCard component
+import UserCard from './UserCard';
 import { TextField, Box, Button, Typography, Divider, Grid } from '@mui/material';
 import MenuItem from '@mui/material/MenuItem';
 
@@ -20,7 +20,7 @@ const UserList = () => {
             try {
                 const { data } = await axios.get('http://localhost:5000/api/users');
                 setUsers(data);
-                setFilteredUsers(data); // Initialize filtered users with all users
+                setFilteredUsers(data); 
             } catch (error) {
                 console.error("Error fetching users:", error);
             }
@@ -70,7 +70,6 @@ const UserList = () => {
 
     return (
         <Grid container spacing={2}>
-            {/* Filter Section */}
             <Grid item xs={12} md={4}>
                 <Box
                     component="form"
@@ -79,16 +78,14 @@ const UserList = () => {
                         p: 3,
                         border: '1px solid #ccc',
                         borderRadius: '8px',
-                        backgroundColor: 'white', // Set background color to white
+                        backgroundColor: 'white',
                     }}
                 >
                     <Typography variant="h6" gutterBottom>
                         Filter 
                     </Typography>
-                    {/* Divider below the header */}
                     <Divider sx={{ mb: 2 }} />
 
-                    {/* Text input for name filter */}
                     <div>
                         <Typography variant="body1" sx={{ mb: 1 }}>Name</Typography>
                         <TextField
@@ -101,7 +98,6 @@ const UserList = () => {
                         />
                     </div>
 
-                    {/* Dropdowns for other filters */}
                     {['industry', 'category', 'expertise', 'location'].map((key) => (
                         <div key={key}>
                             <Typography variant="body1" sx={{ mb: 1 }}>{key.charAt(0).toUpperCase() + key.slice(1)}</Typography>
@@ -146,7 +142,6 @@ const UserList = () => {
                 </Box>
             </Grid>
 
-            {/* User Cards Section */}
             <Grid item xs={12} md={8}>
                 <Divider sx={{ mb: 2 }} />
                 <div>

@@ -8,13 +8,12 @@ const express = require('express');
    app.use(cors());
    app.use(bodyParser.json());
 
-   // MongoDB connection
    mongoose.connect('mongodb://localhost:27017/userDB', {
        useNewUrlParser: true,
        useUnifiedTopology: true,
    });
 
-   // Define user schema
+
    const userSchema = new mongoose.Schema({
        email: { type: String, required: true },
        name: { type: String, required: true },
@@ -28,12 +27,12 @@ const express = require('express');
 
    const User = mongoose.model('User', userSchema);
 
-   // API to add user
+
    app.post('/api/users', async (req, res) => {
        const { name, category, expertise, industries, stages, location, languages } = req.body;
 
        const user = new User({
-           email: uuidv4() + '@example.com', // Auto-generate email
+           email: uuidv4() + '@example.com',
            name,
            category,
            expertise,
@@ -51,7 +50,7 @@ const express = require('express');
        }
    });
 
-   // API to get all users
+
    app.get('/api/users', async (req, res) => {
        try {
            const users = await User.find();
@@ -61,7 +60,6 @@ const express = require('express');
        }
    });
 
-   // Start the server
    app.listen(5000, () => {
        console.log('Server running on port 5000');
    });
